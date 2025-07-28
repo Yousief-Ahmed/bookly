@@ -1,4 +1,4 @@
 import 'package:flutter/widgets.dart';
 
-const primaryColor = Color(0xff100B20);
-const transitionDuration = Duration(milliseconds: 250);
+const kPrimaryColor = Color(0xff100B20);
+const kTransitionDuration = Duration(milliseconds: 250);

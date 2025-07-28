@@ -1,4 +1,4 @@
-import 'package:bookly/constants.dart' show transitionDuration;
+import 'package:bookly/constants.dart' show kTransitionDuration;
 import 'package:bookly/core/util/assets.dart';
 import 'package:bookly/features/home/presentaion/views/home_view.dart';
 import 'package:bookly/features/splash/presentaion/views/widgets/sliding_text.dart';
@@ -36,7 +36,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AssetsData.logo),
+        Image.asset(AssetsData.kLogo),
         SlidingText(slidingAnimation: slidingAnimation),
       ],
     );
@@ -59,7 +59,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       Get.to(
         () => HomeView(),
         transition: Transition.fade,
-        duration: transitionDuration,
+        duration: kTransitionDuration,
       );
     });
   }
