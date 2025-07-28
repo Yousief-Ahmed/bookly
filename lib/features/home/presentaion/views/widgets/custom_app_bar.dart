@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({super.key});
   @override
-  // TODO: implement preferredSize
+  
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
   @override
