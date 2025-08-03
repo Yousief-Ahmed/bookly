@@ -1,6 +1,5 @@
 import 'package:bookly/core/util/assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomListItem extends StatelessWidget {
@@ -14,7 +13,7 @@ class CustomListItem extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12.r),
-            child: Image.asset(AssetsData.kListItem, fit: BoxFit.fill),
+            child: Image.asset(AssetsData.kTestItem, fit: BoxFit.fill),
           ),
           Positioned(
             bottom: 25.h,

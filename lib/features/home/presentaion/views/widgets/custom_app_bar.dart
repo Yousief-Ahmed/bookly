@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 10.h),
+      padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
       child: AppBar(
         leading: Image.asset(AssetsData.kAppBarLogo),
         leadingWidth: 70.w,

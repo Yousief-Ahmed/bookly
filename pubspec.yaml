@@ -28,7 +28,6 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  
   carousel_slider: ^5.1.1
   cupertino_icons: ^1.0.8
   flutter:
@@ -36,9 +35,10 @@ dependencies:
   flutter_screenutil: ^5.9.3
   font_awesome_flutter: ^10.8.0
   get: ^4.7.2
+  google_fonts: ^6.2.1
 
 dev_dependencies:
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
 
@@ -76,5 +76,13 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+    - family: GTSectra
+      fonts:
+        - asset: assets/fonts/GT-Sectra-Fine-Regular.ttf
+    - family: Gilroy
+      fonts:
+        - asset: assets/fonts/Gilroy-Bold.ttf
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
