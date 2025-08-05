@@ -1,10 +1,9 @@
-import 'package:bookly/core/util/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({super.key});
+class BookDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const BookDetailsAppBar({super.key});
+
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
@@ -13,12 +12,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
       child: AppBar(
-        leading: Image.asset(AssetsData.kAppBarLogo),
-        leadingWidth: 70.w,
+        leading: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: Icon(FontAwesomeIcons.magnifyingGlass),
+            icon: Icon(Icons.shopping_cart_outlined),
           ),
         ],
       ),
