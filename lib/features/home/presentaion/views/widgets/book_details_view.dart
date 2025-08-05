@@ -10,6 +10,7 @@ class BookDetailsView extends StatelessWidget {
     return Scaffold(
       appBar: BookDetailsAppBar(),
       body: BookDetailsViewBody(),
+      
     );
   }
 }
