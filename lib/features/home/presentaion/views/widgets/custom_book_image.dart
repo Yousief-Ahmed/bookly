@@ -2,8 +2,8 @@ import 'package:bookly/core/util/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomListItem extends StatelessWidget {
-  const CustomListItem({super.key});
+class CustomBookImage extends StatelessWidget {
+  const CustomBookImage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class CustomListItem extends StatelessWidget {
       child: Stack(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(12.r),
+            borderRadius: BorderRadius.circular(16.r),
             child: Image.asset(AssetsData.kTestItem, fit: BoxFit.fill),
           ),
           Positioned(
