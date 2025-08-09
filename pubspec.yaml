@@ -83,5 +83,10 @@ flutter:
     - family: Gilroy
       fonts:
         - asset: assets/fonts/Gilroy-Bold.ttf
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBookImage extends StatelessWidget {
-  const CustomBookImage({super.key});
+  final bool showButton;
+  const CustomBookImage({super.key, this.showButton=false});
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +16,9 @@ class CustomBookImage extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.r),
             child: Image.asset(AssetsData.kTestItem, fit: BoxFit.fill),
           ),
+          if(showButton)
           Positioned(
-            bottom: 25.h,
+            bottom: 10.h,
             right: 15.w,
             child: InkWell(
               onTap: () {},

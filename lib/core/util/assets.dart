@@ -4,4 +4,5 @@ class AssetsData {
   static const kTestItem = 'assets/images/test-item.png';
   static const kGtSectra = "GTSectra";
   static const kGilroy = "Gilroy";
+  static const kMontserrat = "Montserrat";
 }
