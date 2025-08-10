@@ -26,5 +26,12 @@ class Bookly extends StatelessWidget {
         ),
       ),
     );
+    /*   MaterialApp(
+      builder: (context, child) => Scaffold(
+        body: Center(
+          child: Text("sasasdd"),
+        ),
+      ),
+    ); */
   }
 }

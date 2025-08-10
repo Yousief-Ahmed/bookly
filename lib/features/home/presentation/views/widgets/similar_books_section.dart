@@ -1,6 +1,6 @@
 import 'package:bookly/core/util/assets.dart';
 import 'package:bookly/core/util/styles.dart';
-import 'package:bookly/features/home/presentaion/views/widgets/similar_books_list_view.dart';
+import 'package:bookly/features/home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,5 +1,5 @@
-import 'package:bookly/features/home/presentaion/views/widgets/book_details_section.dart';
-import 'package:bookly/features/home/presentaion/views/widgets/similar_books_section.dart';
+import 'package:bookly/features/home/presentation/views/widgets/book_details_section.dart';
+import 'package:bookly/features/home/presentation/views/widgets/similar_books_section.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
