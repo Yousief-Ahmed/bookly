@@ -1,6 +1,7 @@
 import 'package:bookly/core/util/assets.dart';
-import 'package:bookly/core/util/custom_app_bar.dart';
+
 import 'package:bookly/core/util/go_router.dart';
+import 'package:bookly/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,7 +31,6 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
-
 
 /* AppBar(
         leading: Image.asset(AssetsData.kAppBarLogo),
