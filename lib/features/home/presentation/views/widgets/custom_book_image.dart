@@ -1,47 +1,58 @@
 import 'package:bookly/core/util/assets.dart';
+import 'package:bookly/core/widgets/custom_loading_indicator.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBookImage extends StatelessWidget {
   final bool showButton;
-  const CustomBookImage({super.key, this.showButton = false});
+  final String imageUrl;
+  const CustomBookImage({
+    super.key,
+    this.showButton = false,
+    required this.imageUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 2.7 / 4,
-      child: Stack(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(16.r),
-            child: Image.asset(AssetsData.kTestItem, fit: BoxFit.fill),
+    return Stack(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(16.r),
+          child: AspectRatio(
+            aspectRatio: 2.6 / 4,
+            child: CachedNetworkImage(
+              fit: BoxFit.fill,
+              errorWidget: (context, url, error) {
+                return Icon(Icons.error, color: Colors.red, size: 50.sp);
+              },
+              imageUrl: imageUrl,
+            ),
           ),
-          if (showButton)
-            Positioned(
-              bottom: 10.h,
-              right: 15.w,
-              child: InkWell(
-                onTap: () {},
-                child: Container(
-                  padding: EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.1),
-                    shape: BoxShape.circle,
+        ),
+        if (showButton)
+          Positioned(
+            bottom: 10.h,
+            right: 1.w,
+            child: SizedBox(
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: CircleBorder(),
+                  backgroundColor: Colors.black.withOpacity(0.3),
+                ),
+                onPressed: () {},
+                child: IconButton(
+                  icon: Icon(
+                    Icons.play_arrow,
+                    color: Colors.white,
+                    size: 28.sp,
                   ),
-                  child: SizedBox(
-                    width: 40.w,
-                    height: 40.h,
-                    child: const Icon(
-                      Icons.play_arrow,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-                  ),
+                  onPressed: null, // Add your onPressed logic here
                 ),
               ),
             ),
-        ],
-      ),
+          ),
+      ],
     );
   }
 }
