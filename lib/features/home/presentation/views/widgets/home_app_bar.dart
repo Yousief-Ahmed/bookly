@@ -1,18 +1,38 @@
 import 'package:bookly/core/util/assets.dart';
+
+import 'package:bookly/core/util/go_router.dart';
+import 'package:bookly/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
+
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
-
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 10.h),
-      child: AppBar(
+      child: CustomAppBar(
+        leading: Image.asset(AssetsData.kAppBarLogo),
+        leadingWidth: 70.w,
+        action: [
+          IconButton(
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.kSearchView);
+            },
+            icon: Icon(FontAwesomeIcons.magnifyingGlass, size: 22),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/* AppBar(
         leading: Image.asset(AssetsData.kAppBarLogo),
         leadingWidth: 70.w,
         actions: [
@@ -21,7 +41,4 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: Icon(FontAwesomeIcons.magnifyingGlass),
           ),
         ],
-      ),
-    );
-  }
-}
+      ), */
