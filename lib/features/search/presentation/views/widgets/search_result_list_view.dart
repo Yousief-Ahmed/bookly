@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/widgets/best_seller_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/newest_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +12,7 @@ class SearchResultListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
-          child: BestSellerItem(),
+          child: Text('data'),
         );
       },
     );

@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 
 abstract class Failure {
   final String errorMsg;
@@ -23,6 +22,7 @@ class ServerFailure extends Failure {
       case DioExceptionType.receiveTimeout:
         return ServerFailure(
           errorMsg: "Recieve Timeout while connecting to the server ",
+        
         );
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(
@@ -32,14 +32,17 @@ class ServerFailure extends Failure {
       case DioExceptionType.cancel:
         return ServerFailure(
           errorMsg: "Request cancelled while connecting to the server ",
+        
         );
       case DioExceptionType.unknown:
         if (dioError.message!.contains("SocketException")) {
-          return ServerFailure(errorMsg: "No internet connection");
+          return ServerFailure(errorMsg: "No internet connection",);
         }
         return ServerFailure(errorMsg: "Unexpected error, please try again");
       default:
-        return ServerFailure(errorMsg: "Oops , There was an error , Kindly try again");
+        return ServerFailure(
+          errorMsg: "Kindly ",
+        );
     }
   }
 

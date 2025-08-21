@@ -1,6 +1,7 @@
 import 'package:bookly/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
 class BookDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
   const BookDetailsAppBar({super.key});
@@ -13,7 +14,13 @@ class BookDetailsAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 30.w),
       child: CustomAppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.close)),
+        leadingWidth: 70.w,
+        leading: IconButton(
+          onPressed: () {
+            GoRouter.of(context).pop();
+          },
+          icon: Icon(Icons.close),
+        ),
         action: [
           IconButton(
             onPressed: () {},
